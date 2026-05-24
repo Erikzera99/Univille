@@ -360,7 +360,7 @@
             <div>
               <p class="flex-demo-titulo">row: coloca os itens em linha horizontal </br> flex-start: alinha os itens no topo do container.
                </p>
-              <div class="flex-box flex-box--row flex-box--flex-start" aria-label="Demonstração: itens em linha alinhados ao topo">
+              <div class="flex-box flex-box--row flex-box--flex-start flex-box--wrap" aria-label="Demonstração: itens em linha alinhados ao topo">
                 <div class="flex-item">Item A</div>
                 <div class="flex-item" style="padding-block:1.2rem;">Item B (médio)</div>
                 <div class="flex-item" style="padding-block:1.6rem;">Item C (grande)</div>
@@ -369,7 +369,7 @@
 
               <div>
               <p class="flex-demo-titulo">flex-end: alinha os itens na base do container. </p>
-              <div class="flex-box flex-box--row flex-box--flex-end" aria-label="Demonstração: itens em linha alinhados ao topo">
+              <div class="flex-box flex-box--row flex-box--flex-end flex-box--wrap" aria-label="Demonstração: itens em linha alinhados ao topo">
                 <div class="flex-item">Item A</div>
                 <div class="flex-item" style="padding-block:1.2rem;">Item B (médio)</div>
                 <div class="flex-item" style="padding-block:1.6rem;">Item C (grande)</div>
@@ -379,7 +379,7 @@
 
             <div>
               <p class="flex-demo-titulo"><strong>justify-content:</strong> center + align-items: center</p>
-              <div class="flex-box flex-box--center" aria-label="Demonstração: itens centralizados">
+              <div class="flex-box flex-box--center flex-box--wrap" aria-label="Demonstração: itens centralizados">
                 <div class="flex-item">Centralizado</div>
                 <div class="flex-item">no eixo X e Y</div>
                 <span class="flex-label">center</span>
@@ -388,7 +388,7 @@
 
             <div>
               <p class="flex-demo-titulo">justify-content: space-between</p>
-              <div class="flex-box flex-box--between" aria-label="Demonstração: espaço entre itens">
+              <div class="flex-box flex-box--between flex-box--wrap" aria-label="Demonstração: espaço entre itens">
                 <div class="flex-item flex-item--small">Tag 1</div>
                 <div class="flex-item flex-item--small">Tag 2</div>
                 <div class="flex-item flex-item--small">Tag 3</div>
@@ -413,7 +413,7 @@
 
             <div>
               <p class="flex-demo-titulo">flex-grow: 1 — item cresce para preencher o espaço</p>
-              <div class="flex-box" style="flex-direction:row;align-items:center;" aria-label="Demonstração: item que cresce para preencher espaço disponível">
+              <div class="flex-box flex-box--wrap" style="flex-direction:row;align-items:center;" aria-label="Demonstração: item que cresce para preencher espaço disponível">
                 <div class="flex-item">Fixo</div>
                 <div class="flex-item flex-item--grow">flex-grow: 1 → cresce!</div>
                 <div class="flex-item">Fixo</div>
@@ -433,7 +433,7 @@
 
             <div>
               <p class="flex-demo-titulo">align-self — cada item define seu próprio alinhamento vertical  </p>
-              <div class="flex-box" style="flex-direction: row; align-items: center; height: 10rem;" aria-label="Demonstração: align-self">
+              <div class="flex-box flex-box--wrap" style="flex-direction: row; align-items: center; height: 10rem;" aria-label="Demonstração: align-self">
                 <div class="flex-item" style="align-self: flex-start;">flex-start</div>
                 <div class="flex-item" style="align-self: center;">center</div>
                 <div class="flex-item" style="align-self: flex-end;">flex-end</div>
@@ -449,7 +449,7 @@
                   No HTML: A → B → C → D, mas visualmente aparecem na ordem abaixo
                 </span>
               </p>
-              <div class="flex-box" style="flex-direction: row; gap: 0.5rem;"
+              <div class="flex-box flex-box--wrap" style="flex-direction: row; gap: 0.5rem;"
                   aria-label="Demonstração: order">
                 <div class="flex-item" style="order: 3;">A (order 3)</div>
                 <div class="flex-item flex-item--grow" style="order: 1; background: linear-gradient(135deg,var(--cor-roxo),#9933cc); color:#fff;">B (order 1)</div>
