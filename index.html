@@ -152,6 +152,8 @@
         </div>
       </div>
 
+
+
       <!-- ================================================
            SEÇÃO 1: HTML SEMÂNTICO
            ================================================ -->
@@ -357,7 +359,7 @@
 
             <div>
               <p class="flex-demo-titulo">row: coloca os itens em linha horizontal </br> flex-start: alinha os itens no topo do container.
-              </br> flex-end: alinha os itens na base do container. </p>
+               </p>
               <div class="flex-box flex-box--row flex-box--flex-start" aria-label="Demonstração: itens em linha alinhados ao topo">
                 <div class="flex-item">Item A</div>
                 <div class="flex-item" style="padding-block:1.2rem;">Item B (médio)</div>
@@ -365,6 +367,8 @@
                 <span class="flex-label">flex-start</span>
               </div>
 
+              <div>
+              <p class="flex-demo-titulo">flex-end: alinha os itens na base do container. </p>
               <div class="flex-box flex-box--row flex-box--flex-end" aria-label="Demonstração: itens em linha alinhados ao topo">
                 <div class="flex-item">Item A</div>
                 <div class="flex-item" style="padding-block:1.2rem;">Item B (médio)</div>
@@ -395,12 +399,63 @@
             </div>
 
             <div>
+              <p class="flex-demo-titulo">flex-wrap: wrap — itens quebram para a próxima linha</p>
+              <div class="flex-box flex-box--wrap" aria-label="Demonstração: flex-wrap">
+                <div class="flex-item" style="min-width: 6rem;">Tag A</div>
+                <div class="flex-item" style="min-width: 6rem;">Tag B</div>
+                <div class="flex-item" style="min-width: 6rem;">Tag C</div>
+                <div class="flex-item" style="min-width: 6rem;">Tag D</div>
+                <div class="flex-item" style="min-width: 6rem;">Tag E</div>
+                <div class="flex-item" style="min-width: 6rem;">Tag F</div>
+                <span class="flex-label">flex-wrap</span>
+              </div>
+            </div>
+
+            <div>
               <p class="flex-demo-titulo">flex-grow: 1 — item cresce para preencher o espaço</p>
               <div class="flex-box" style="flex-direction:row;align-items:center;" aria-label="Demonstração: item que cresce para preencher espaço disponível">
                 <div class="flex-item">Fixo</div>
                 <div class="flex-item flex-item--grow">flex-grow: 1 → cresce!</div>
                 <div class="flex-item">Fixo</div>
                 <span class="flex-label">flex-grow</span>
+              </div>
+            </div>
+
+            <div>
+               <p class="flex-demo-titulo">flex-direction: column — itens empilhados verticalmente</p>
+               <div class="flex-box flex-box--column" style="align-items: flex-start; height: 12rem;"  aria-label="Demonstração: itens em coluna">
+              <div class="flex-item">Item 1</div>
+              <div class="flex-item">Item 2</div>
+              <div class="flex-item">Item 3</div>
+              <span class="flex-label">column</span>
+             </div>
+            </div>
+
+            <div>
+              <p class="flex-demo-titulo">align-self — cada item define seu próprio alinhamento vertical  </p>
+              <div class="flex-box" style="flex-direction: row; align-items: center; height: 10rem;" aria-label="Demonstração: align-self">
+                <div class="flex-item" style="align-self: flex-start;">flex-start</div>
+                <div class="flex-item" style="align-self: center;">center</div>
+                <div class="flex-item" style="align-self: flex-end;">flex-end</div>
+                <div class="flex-item" style="align-self: stretch; padding-block: 0;">stretch</div>
+                <span class="flex-label">align-self</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="flex-demo-titulo">
+                order — reordena itens visualmente sem alterar o HTML<br/>
+                <span style="font-size: 0.8em; opacity: 0.7;">
+                  No HTML: A → B → C → D, mas visualmente aparecem na ordem abaixo
+                </span>
+              </p>
+              <div class="flex-box" style="flex-direction: row; gap: 0.5rem;"
+                  aria-label="Demonstração: order">
+                <div class="flex-item" style="order: 3;">A (order 3)</div>
+                <div class="flex-item flex-item--grow" style="order: 1; background: linear-gradient(135deg,var(--cor-roxo),#9933cc); color:#fff;">B (order 1)</div>
+                <div class="flex-item" style="order: 4;">C (order 4)</div>
+                <div class="flex-item" style="order: 2;">D (order 2)</div>
+                <span class="flex-label">order</span>
               </div>
             </div>
 
@@ -457,7 +512,40 @@
                   <p class="grid-cel-titulo">Quinta célula</p>
                 </div>
               </div>
+
+            <div>
+                <p class="flex-demo-titulo" style="margin-top:1.5rem;">
+                  grid-template-columns: 1fr 2fr 1fr — a unidade <code>fr</code> divide o espaço proporcionalmente
+                </p>
+                <div class="grid-demo-fr" aria-label="Demonstração de colunas fracionárias">
+                  <div class="grid-cel grid-cel--secundario">
+                    <p class="grid-cel-label">1fr</p>
+                    <p class="grid-cel-titulo">Coluna pequena</p>
+                  </div>
+                  <div class="grid-cel grid-cel--destaque" style="grid-row: auto;">
+                    <p class="grid-cel-label">2fr</p>
+                    <p class="grid-cel-titulo">Coluna dupla</p>
+                  </div>
+                  <div class="grid-cel grid-cel--terciario">
+                    <p class="grid-cel-label">1fr</p>
+                    <p class="grid-cel-titulo">Coluna pequena</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
+              <div>
+                <p class="flex-demo-titulo">
+                  repeat(auto-fill, minmax(8rem, 1fr)) — colunas que nascem e somem sozinhas conforme o espaço
+                </p>
+                <div class="grid-demo-autofill" aria-label="Demonstração de auto-fill com minmax">
+                  <div class="grid-cel grid-cel--secundario"><p class="grid-cel-label">auto</p><p class="grid-cel-titulo">Card 1</p></div>
+                  <div class="grid-cel grid-cel--terciario"><p class="grid-cel-label">auto</p><p class="grid-cel-titulo">Card 2</p></div>
+                  <div class="grid-cel grid-cel--quatro"><p class="grid-cel-label">auto</p><p class="grid-cel-titulo">Card 3</p></div>
+                  <div class="grid-cel grid-cel--secundario"><p class="grid-cel-label">auto</p><p class="grid-cel-titulo">Card 4</p></div>
+                  <div class="grid-cel grid-cel--terciario"><p class="grid-cel-label">auto</p><p class="grid-cel-titulo">Card 5</p></div>
+                </div>
+              </div>
 
             <!-- Comparação Flexbox vs Grid -->
             <div>
