@@ -123,7 +123,6 @@
         width: 100%;
         /* MEDIDAS: max-width em rem limita em telas grandes */
         max-width: 75rem; /* 1200px */
-        margin-inline: auto;
         /* MEDIDAS: padding em rem + vw para ser responsivo */
         padding-inline: clamp(1rem, 5vw, 3rem);
       }
